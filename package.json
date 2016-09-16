@@ -1,0 +1,15 @@
+{
+  "name": "catomatic",
+  "version": "1.0.0",
+  "description": "IoT server to feed the cats",
+  "main": "feeder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Richard Anstey",
+  "license": "ISC",
+  "dependencies": {
+    "hydna": "^2.0.3",
+    "rpio": "^0.9.12"
+  }
+}
