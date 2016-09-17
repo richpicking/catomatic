@@ -67,7 +67,7 @@ counter = 0;
 // Set to -1 or -2 for anti-clockwise
 var StepDir = 1;
 
-// wait for everything to settle down 
+// wait for everything to settle down
 rpio.sleep(1);
 
 //# Define advanced sequence
@@ -175,9 +175,9 @@ function measureDist() {
   // This function measures a distance
   rpio.write(DIST_TRIGGER, 1);
 //  setTimeout(function(){
-   rpio.usleep(10); 
+   rpio.usleep(10);
 	rpio.write(DIST_TRIGGER, 0);
-	
+
 //	while (rpio.read(GPIO_ECHO) == 0) {
 //		console.time("echotime");
 //	}
@@ -187,8 +187,8 @@ function measureDist() {
 	rpio.readbuf(DIST_ECHO,buf);
 	console.timeEnd("buffertime");
 //    console.log("Buffer:"+buf);
-//   },1); //fire trigger for 1ms then set back to zero 
-  
+//   },1); //fire trigger for 1ms then set back to zero
+
 rpio.msleep(10);
 
 var swit=0;
@@ -197,7 +197,7 @@ for (var i=0;i<buf.length;i++) {
       swit = buf[i];
 	  console.log("Pos:"+i+" - "+buf[i]);
 	}
-	
+
 }
 console.log(i+" buffer entries checked");
 

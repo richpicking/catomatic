@@ -26,19 +26,19 @@ function flash(){
 	}else {
 	    rpio.write(LAMP, rpio.HIGH);
 	    on=true;
-		
+
 	}
-	
-	
+
+
 }
 
 
 function doFlash() {
-	
+
 
 var flasher = setInterval(flash, 200);
 
-var stopper = setTimeout(function(){ 
+var stopper = setTimeout(function(){
 	clearInterval(flasher);
 	rpio.write(LAMP, rpio.LOW);
 
