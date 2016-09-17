@@ -25,7 +25,8 @@ var feeder = {
     },
 
     listenToHydna: function() {
-
+      feeder.channel = hydna.createChannel(feeder.domain+'/'+feeder.channel, 'rw');
+      console.log("listening...");
     },
 
     flashbutton: function(direction) {
@@ -33,8 +34,7 @@ var feeder = {
 
     init : function() {
       feeder.newvar = "blah";
-      feeder.channel = hydna.createChannel(feeder.domain+'/'+feeder.channel, 'rw');
-
+      feeder.listenToHydna();
 
     }
 };
